@@ -27,7 +27,7 @@ class UITARSRunner:
         self.uitars_version = "1.5"
         self.model_name = 'doubao-1-5-ui-tars-250428'
         self.API_url_uitars = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
-        self.token_uitars = "27e21695-2eb3-49a7-8249-656b926fbe94"
+        self.token_uitars = "ENTER-YOUR-API-HERE"
         self.history_n = 5
         
         # State
