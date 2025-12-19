@@ -17,14 +17,18 @@ https://github.com/user-attachments/assets/3380a514-8e6a-48c7-ab00-2e68af41d055
 ### 1.远程服务器连接手机ADB
 在连接主机开始ADB调试后，打开无线调试选项（会显示ip:port），之后ssh输入adb connect [ip]:[port]，同时在手机上确认配对，即可远程调试ADB
 ### 2.vllm部署qwen3vl
+```bash
 conda create -n vllm python = 3.10
 conda activate vllm
 pip install vllm
 mkdir vllm_deploy
 cd vllm_deploy
+```
 下载模型
+```bash
 modelscope download --model Qwen/Qwen3-VL-8B-Instruct --local_dir Qwen/Qwen3-VL-8B-Instruct
 vllm serve Qwen/Qwen3-VL-8B-Instruct/ --trust-remote-code --tensor-parallel-size 2 --max-model-len 65536  --port 8000 --host 0.0.0.0 --dtype bfloat16
+```
 修改代码逻辑适配qwen3vl
 ### 3.llamafactory微调Qwen3vl-8B
 在使用原始模型是，发现器在处理GUI情况时有几个问题：游戏能力表现弱（消消乐用点而不是滑）无法识别程序中间状态（抖音后台若处于聊天界面，模型打开抖音会说这是聊天程序，之后退出）
