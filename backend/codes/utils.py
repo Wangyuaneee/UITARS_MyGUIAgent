@@ -574,7 +574,7 @@ def convert_coordinates(responses, image_height, image_width, model_type):
     for response_id, response in enumerate(responses):
         action_dict = response
 
-        if model_type != "qwen25vl":
+        if model_type not in ["qwen25vl", "qwen3vl"]:
             return action_dict["text"]
 
 
