@@ -35,7 +35,9 @@ vllm serve Qwen/Qwen3-VL-8B-Instruct/ --trust-remote-code --tensor-parallel-size
 针对这几个问题，构建STF数据集（其实做强化学习更好）进行LoRA微调
 模型效果有明显提升
 
-模型地址：https://modelscope.cn/models/Wangyuaneee/Qwen3-VL-8B-Instruct-UILoRA/summary
+模型地址：https://modelscope.cn/models/Wangyuaneee/Qwen3-VL-8B-Instruct-UILoRA
+
+数据集地址：https://modelscope.cn/datasets/OceanZhengYang/Phone_Photosho_UI
 <img width="640" height="480" alt="M`)7}M CPQ23KFD}9P)@8~M" src="https://github.com/user-attachments/assets/5ccdede1-4f85-4ffa-bf65-426f1557368b" />
 
 
